@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>成為自己生命的園丁</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <header class="top">
+      <div class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" role="presentation">
+          <path d="M32 6c-6 8-8 14-8 18 0 8 8 16 8 16s8-8 8-16c0-4-2-10-8-18z" />
+          <path d="M24 34c-4 4-6 8-6 12 0 6 4 10 14 12" />
+          <path d="M40 34c4 4 6 8 6 12 0 6-4 10-14 12" />
+        </svg>
+      </div>
+      <div class="title-block">
+        <p class="eyebrow">互動式圖卡選擇</p>
+        <h1>成為自己生命的園丁</h1>
+      </div>
+    </header>
+
+    <section id="card" class="card" aria-live="polite"></section>
+  </main>
+
+  <template id="cover-template">
+    <div class="card-inner">
+      <p class="lead">一座花園，映照我們如何照看自己的生命。慢慢翻閱每一張卡，看看今天的你，想怎麼養護這片土地。</p>
+      <button class="primary" data-action="start">走進花園</button>
+    </div>
+  </template>
+
+  <template id="question-template">
+    <div class="card-inner">
+      <p class="progress"></p>
+      <h2 class="question"></h2>
+      <div class="options" role="group" aria-label="選項列表"></div>
+      <div class="footnote">每一次選擇都會保留，重新整理不會遺失。</div>
+    </div>
+  </template>
+
+  <template id="result-template">
+    <div class="card-inner">
+      <p class="progress muted">花園筆記</p>
+      <h2>這座花園目前的狀態</h2>
+      <p class="badge" aria-live="assertive"></p>
+      <p class="description"></p>
+      <p class="reminder">『你不需要只成為一種園丁。修行，是知道現在該由誰照看花園。』</p>
+      <div class="task-block">
+        <p class="task-title">今日園丁小任務</p>
+        <p class="task"></p>
+      </div>
+      <div class="share-row">
+        <button class="secondary" data-action="copy-link">複製目前頁面連結</button>
+        <button class="secondary" data-action="copy-text">複製結果文字</button>
+      </div>
+      <div class="actions">
+        <button class="primary" data-action="wrap-up">收尾一下</button>
+        <button class="ghost" data-action="restart">重新開始</button>
+      </div>
+      <p class="footnote">若有並列，表示不同園丁輪流上場，這是花園的韻律。</p>
+    </div>
+  </template>
+
+  <template id="wrap-template">
+    <div class="card-inner">
+      <h2>收拾工具，留下呼吸</h2>
+      <p class="description">今天的照看告一段落。給花園一些空間，也給自己一點點安靜的葉片聲。</p>
+      <ul class="wrap-list">
+        <li>帶著結果文字，去找一個可以聽風的角落。</li>
+        <li>觀察身體此刻的溫度與重量，像摸摸土壤一樣。</li>
+        <li>等心緩一拍，再決定下一步。</li>
+      </ul>
+      <div class="actions">
+        <button class="primary" data-action="restart">重新開始</button>
+        <button class="ghost" data-action="back-to-result">回到結果卡</button>
+      </div>
+    </div>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
